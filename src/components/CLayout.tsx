@@ -1,7 +1,6 @@
 import React from 'react';
 import {SFooter, SHeader, SMain} from "../assets/styles/app.styles";
 import {Outlet} from "react-router-dom";
-import {Container} from "@mui/material";
 import logo from "../assets/icons/logo.png"
 
 const CLayout: React.FC = () => {

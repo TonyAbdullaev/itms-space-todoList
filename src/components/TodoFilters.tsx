@@ -1,22 +1,13 @@
-import React from 'react';
+import React, {FC, memo} from 'react';
 import {Button} from "@mui/material";
-import {data} from "../constants";
-import {ITodos} from "../models/todo.model";
 
-interface FilterParams {
-    setTodos:  React.Dispatch<React.SetStateAction<ITodos[]>>
+interface ITodoFilters {
+    showAllHandler: () => void,
+    showActiveHandler: () => void,
+    showCompletedHandler: () => void,
 }
 
-const TodoFilters = ({setTodos}: FilterParams) => {
-    const showAllHandler = () => setTodos(data);
-    const showActiveHandler = () => {
-        const activeTodos = data.filter(value => !value.completed)
-        setTodos(activeTodos)
-    };
-    const showCompletedHandler = () => {
-        const completedTodos = data.filter(value => value.completed)
-        setTodos(completedTodos)
-    };
+const TodoFilters: FC<ITodoFilters> = ({showAllHandler, showActiveHandler, showCompletedHandler}) => {
     return (
         <div>
             <Button variant="contained" onClick={showAllHandler}>Show all Tasks</Button>
@@ -26,4 +17,4 @@ const TodoFilters = ({setTodos}: FilterParams) => {
     );
 };
 
-export default TodoFilters;
+export default memo(TodoFilters);

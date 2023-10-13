@@ -6,6 +6,10 @@ export default createGlobalStyle`
     padding: 0;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

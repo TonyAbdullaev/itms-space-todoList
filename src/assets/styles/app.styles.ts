@@ -30,10 +30,10 @@ export const SFooter = styled.header`
   justify-content: space-between;
   color: white;
 `
-
-export const STodo = styled.header`
+export const STodo = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 export const STodoLayout = styled.div`
   align-items: center;
@@ -42,16 +42,17 @@ export const STodoLayout = styled.div`
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
 `
 
-export const STodoModalLayout= styled.article`
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.2);
-  color: floralwhite;
+export const SSpan = styled.span`
+  font-size: 12px;
+  color: gray;
 `
 
-export const STodoModal= styled.article`
-  width: 600px;
-  background: floralwhite;
+export const STitle = styled.h2`
+    font-size: 48px;
+    margin: 10px 0;
 `
 
+export const STitleSmall = styled.h2`
+    font-size: 24px;
+    margin: 10px 0;
+`
